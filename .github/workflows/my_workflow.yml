@@ -7,6 +7,7 @@ on:
 
 env:
   MY_VAR_01: 'HELLO'
+  MY_VAR_02: 'WORLD'
   MY_FOLDER_01: 'my_folder'
   JAVA_VERSION: '15'
   JAVA_DISTRIBUTION: 'adopt'
@@ -35,7 +36,7 @@ jobs:
           cat "$MY_FOLDER_01"/myfile.txt
           cat "${MY_FOLDER_01}"/myfile.txt
           cat ${{env.MY_FOLDER_01}}/myfile.txt
-          sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}}
+          sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}} ${{env.MY_VAR_02}}
 
   my_tests_02:
     runs-on: macos-latest
