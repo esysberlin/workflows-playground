@@ -32,10 +32,12 @@ jobs:
           echo "$MY_VAR_01"
           echo "${MY_VAR_01}"
           echo ${{env.MY_VAR_01}}
+          echo "${{env.MY_VAR_01}}"
           cat $MY_FOLDER_01/myfile.txt
           cat "$MY_FOLDER_01"/myfile.txt
           cat "${MY_FOLDER_01}"/myfile.txt
           cat ${{env.MY_FOLDER_01}}/myfile.txt
+          cat "${{env.MY_FOLDER_01}}"/myfile.txt
           sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}} ${{env.MY_VAR_02}}
 
   my_tests_02:
@@ -53,11 +55,14 @@ jobs:
         
       - name: Do sth. multi
         run: |
-         echo $MY_VAR_01
-         echo "$MY_VAR_01"
-         echo "${MY_VAR_01}"
-         echo ${{env.MY_VAR_01}}
-         cat $MY_FOLDER_01/myfile.txt
-         cat "$MY_FOLDER_01"/myfile.txt
-         cat "${MY_FOLDER_01}"/myfile.txt
-         cat ${{env.MY_FOLDER_01}}/myfile.txt
+          echo $MY_VAR_01
+          echo "$MY_VAR_01"
+          echo "${MY_VAR_01}"
+          echo ${{env.MY_VAR_01}}
+          echo "${{env.MY_VAR_01}}"
+          cat $MY_FOLDER_01/myfile.txt
+          cat "$MY_FOLDER_01"/myfile.txt
+          cat "${MY_FOLDER_01}"/myfile.txt
+          cat ${{env.MY_FOLDER_01}}/myfile.txt
+          cat "${{env.MY_FOLDER_01}}"/myfile.txt
+          sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}} ${{env.MY_VAR_02}}
