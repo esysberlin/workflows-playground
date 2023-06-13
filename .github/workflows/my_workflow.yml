@@ -39,6 +39,7 @@ jobs:
           cat ${{env.MY_FOLDER_01}}/myfile.txt
           cat "${{env.MY_FOLDER_01}}"/myfile.txt
           sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}} ${{env.MY_VAR_02}}
+          sh ${{env.MY_FOLDER_01}}/myscript.sh "${{env.MY_VAR_01}}" "${{env.MY_VAR_02}}"
 
   my_tests_02:
     runs-on: macos-latest
@@ -66,3 +67,4 @@ jobs:
           cat ${{env.MY_FOLDER_01}}/myfile.txt
           cat "${{env.MY_FOLDER_01}}"/myfile.txt
           sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}} ${{env.MY_VAR_02}}
+          sh ${{env.MY_FOLDER_01}}/myscript.sh "${{env.MY_VAR_01}}" "${{env.MY_VAR_02}}"
