@@ -11,47 +11,43 @@ env:
   JAVA_DISTRIBUTION: 'adopt'
   
 jobs:
+  my_tests_01:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+            java-version: ${{ env.JAVA_VERSION }}
+            distribution: ${{ env.JAVA_DISTRIBUTION }}
+        
+      - name: Do sth. multi
+        run: |
+          echo "${MY_VAR_01}"
+          echo "${JAVA_VERSION}"
+          echo "$MY_VAR_01"
+          echo $MY_VAR_01
+
+
   my_tests_02:
     runs-on: macos-latest
     steps:
 
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Set up Java
-      uses: actions/setup-java@v3
-      with:
-          java-version: ${{ env.JAVA_VERSION }}
-          distribution: ${{ env.JAVA_DISTRIBUTION }}
-    
-
-    # generate missing files
-    - name: Do sth. multi
-      run: |
-        echo "${MY_VAR_01}"
-        echo "${JAVA_VERSION}"
-        echo "$MY_VAR_01"
-        echo $MY_VAR_01
-
-
-        my_tests_01:
-            runs-on: ubuntu-latest
-            steps:
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+            java-version: ${{ env.JAVA_VERSION }}
+            distribution: ${{ env.JAVA_DISTRIBUTION }}
         
-            - name: Checkout repository
-              uses: actions/checkout@v3
-        
-            - name: Set up Java
-              uses: actions/setup-java@v3
-              with:
-                  java-version: ${{ env.JAVA_VERSION }}
-                  distribution: ${{ env.JAVA_DISTRIBUTION }}
-            
-        
-            # generate missing files
-            - name: Do sth. multi
-              run: |
-                echo "${MY_VAR_01}"
-                echo "${JAVA_VERSION}"
-                echo "$MY_VAR_01"
-                echo $MY_VAR_01
+      - name: Do sth. multi
+        run: |
+          echo "${MY_VAR_01}"
+          echo "${JAVA_VERSION}"
+          echo "$MY_VAR_01"
+          echo $MY_VAR_01
