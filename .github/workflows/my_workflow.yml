@@ -35,6 +35,7 @@ jobs:
           cat "$MY_FOLDER_01"/myfile.txt
           cat "${MY_FOLDER_01}"/myfile.txt
           cat ${{env.MY_FOLDER_01}}/myfile.txt
+          sh ${{env.MY_FOLDER_01}}/myscript.sh ${{env.MY_VAR_01}}
 
   my_tests_02:
     runs-on: macos-latest
