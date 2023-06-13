@@ -27,9 +27,13 @@ jobs:
       - name: Do sth. multi
         run: |
           echo "${MY_VAR_01}"
+          echo "${env.MY_VAR_01}"
           echo "${JAVA_VERSION}"
+          echo "${env.JAVA_VERSION}"
           echo "$MY_VAR_01"
+          echo "$env.MY_VAR_01"
           echo $MY_VAR_01
+          echo $env.MY_VAR_01
 
 
   my_tests_02:
@@ -48,6 +52,10 @@ jobs:
       - name: Do sth. multi
         run: |
           echo "${MY_VAR_01}"
+          echo "${env.MY_VAR_01}"
           echo "${JAVA_VERSION}"
+          echo "${env.JAVA_VERSION}"
           echo "$MY_VAR_01"
+          echo "$env.MY_VAR_01"
           echo $MY_VAR_01
+          echo $env.MY_VAR_01
