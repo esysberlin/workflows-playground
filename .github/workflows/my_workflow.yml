@@ -26,15 +26,11 @@ jobs:
         
       - name: Do sth. multi
         run: |
-          echo "${MY_VAR_01}"
-          echo "${env.MY_VAR_01}"
-          echo "${JAVA_VERSION}"
-          echo "${env.JAVA_VERSION}"
-          echo "$MY_VAR_01"
-          echo "$env.MY_VAR_01"
           echo $MY_VAR_01
-          echo $env.MY_VAR_01
-
+          echo "$MY_VAR_01"
+          echo "${MY_VAR_01}"
+          echo "${{env.MY_VAR_01}}"
+          echo ${{env.MY_VAR_01}}
 
   my_tests_02:
     runs-on: macos-latest
@@ -51,11 +47,8 @@ jobs:
         
       - name: Do sth. multi
         run: |
-          echo "${MY_VAR_01}"
-          echo "${env.MY_VAR_01}"
-          echo "${JAVA_VERSION}"
-          echo "${env.JAVA_VERSION}"
-          echo "$MY_VAR_01"
-          echo "$env.MY_VAR_01"
           echo $MY_VAR_01
-          echo $env.MY_VAR_01
+          echo "$MY_VAR_01"
+          echo "${MY_VAR_01}"
+          echo "${{env.MY_VAR_01}}"
+          echo ${{env.MY_VAR_01}}
