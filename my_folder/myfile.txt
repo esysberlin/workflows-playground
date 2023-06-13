@@ -1,1 +1,1 @@
-some content
+Some content.\n
